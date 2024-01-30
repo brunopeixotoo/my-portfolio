@@ -1,0 +1,106 @@
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image:url('/assets/img/icones/trespontos.svg');
+
+}
+
+.header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.header .title {
+    text-align: center;
+}
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.informations p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.125rem;
+}
+
+.informations p::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 18px;
+    background-image: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.informations .perfil::before {
+    background-image: url('../img/icones/perfil.svg');
+    width: 18px;
+    height: 21px;
+}
+
+.informations .location::before {
+    background-image: url('../img/icones/location.svg');
+    width: 17px;
+    height: 25px
+}
+
+.informations .email::before {
+    background-image: url('../img/icones/email.svg');
+    width: 19px;
+    height: 17px;
+}
+
+.informations .wpp::before {
+    background-image: url('../img/icones/wpp.svg');
+    width: 22px;
+    height: 22px
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas: 
+            "photo title"
+            "photo informations"
+        ;
+    }
+
+    .header .photo {
+        grid-area: photo;
+        margin: 0;
+    }
+
+    .header .title {
+        grid-area: title;
+        text-align: start;
+        max-width: 210px;
+    }
+
+    .header .informations{
+        grid-area: informations;
+    }
+}

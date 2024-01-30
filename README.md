@@ -1,2 +1,2 @@
-# my-portfolio
-Portfólio profissional de Bruno Rodrigues Peixoto
+# portfolio-bruno
+Portfólio - Bruno Rodrigues Peixoto
